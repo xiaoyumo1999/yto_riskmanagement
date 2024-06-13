@@ -1,1 +1,3 @@
 # yto_riskmanagement
+该项目包含电商贷、小微保、秒贷三个产品的外部数据更新、准入和监测
+需要在catch_data.py中添加mongdb链接和mysql数据账号密码，以及当前文件夹下添加一个data的文件夹

@@ -89,7 +89,7 @@ history2current={'PersonXuanyuanScore':'tb_credit_report_person_xuanyuan_score',
 'PersonOnlineTime':'tb_credit_report_person_online_time',
 'PersonOnlineState':'tb_credit_report_person_online_state'}
 
-client = MongoClient('mongodb://ods_prd_ro:u%257e577HnvpEY*h6@s-uf62656caf0435e4.mongodb.rds.aliyuncs.com:3717,s-uf6a510d41341184.mongodb.rds.aliyuncs.com:3717/?authSource=ods')
+client = MongoClient(link)##修改为数据库链接
 db = client['ods']
 
 breaks={'共债分':[-np.inf,0,40,50,60,70,100],
@@ -106,7 +106,7 @@ type_dic=dict(zip(dic['字段说明'],dic['字段类型']))
 
 
 def read_database(query):
-    conn = pymysql.connect(host='martin-ma.xyz', user='fms_user', password='^uC@5OKqkzXd', database='fms_db',port=53306)
+    conn = pymysql.connect(host=host, user=user_name, password=password, database=database,port=port)##修改连接数据
     cursor = conn.cursor()
     cursor.execute(query)
     query_result = cursor.fetchall()

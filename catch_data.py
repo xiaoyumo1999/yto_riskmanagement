@@ -14,9 +14,6 @@ from Crypto.Util.Padding import unpad
 from pymongo import MongoClient
 
 
-# path=input('==========输入数据库保存的路径：')
-# path='C:/Users/HP/Desktop/yto/项目测试路径'
-# os.chdir(path)
 card=pd.read_excel('data/评分卡.xlsx')
 dic=pd.read_excel('data/MySQL使用文档(完整版).xlsx')
 warnings.filterwarnings('ignore')
